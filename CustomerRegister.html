@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Customer Registration - ElectroZone</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: url('https://www.wetenschapverandertjewereld.nl/wp-content/uploads/2020/11/gadgets-2048x1365.jpg') no-repeat center center fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background-color: #1e2a38;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+  }
+  .container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  .form-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px 40px;
+    width: 480px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    position: relative;
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap; /* keep heading in one line */
+  }
+  .input-group {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 16px;
+    outline: none;
+    background: none;
+    transition: border-color 0.3s;
+  }
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #764ba2;
+  }
+  label {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    color: #aaa;
+    font-size: 16px;
+    pointer-events: none;
+    background: white;
+    padding: 0 5px;
+    transition: 0.3s ease all;
+  }
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #764ba2;
+    font-weight: 600;
+  }
+  input::placeholder {
+    color: transparent;
+  }
+  input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #764ba2, #667eea);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.4s ease;
+    box-shadow: 0 6px 12px rgba(102,126,234,0.6);
+  }
+  input[type="submit"]:hover {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    box-shadow: 0 8px 15px rgba(118,75,162,0.8);
+  }
+  footer {
+    background-color: #1e2a38;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  @media (max-width: 520px) {
+    .form-box {
+      width: 90%;
+      padding: 25px 20px;
+    }
+    h1 {
+      white-space: normal;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  ElectroZone - Customer Portal
+</header>
+
+<div class="container">
+  <div class="form-box">
+    <h1>Customer Registration</h1>
+    <form action="creg" method="post" autocomplete="off">
+      <div class="input-group">
+        <input type="text" id="c_uname" name="c_uname" placeholder=" " required />
+        <label for="c_uname">UserName</label>
+      </div>
+      <div class="input-group">
+        <input type="password" id="c_pwd" name="c_pwd" placeholder=" " required />
+        <label for="c_pwd">Password</label>
+      </div>
+      <div class="input-group">
+        <input type="text" id="c_fname" name="c_fname" placeholder=" " required />
+        <label for="c_fname">FirstName</label>
+      </div>
+      <div class="input-group">
+        <input type="text" id="c_lname" name="c_lname" placeholder=" " required />
+        <label for="c_lname">LastName</label>
+      </div>
+      <div class="input-group">
+        <input type="text" id="c_addr" name="c_addr" placeholder=" " required />
+        <label for="c_addr">Address</label>
+      </div>
+      <div class="input-group">
+        <input type="text" id="c_mailid" name="c_mailid" placeholder=" " required />
+        <label for="c_mailid">Mail_ID</label>
+      </div>
+      <div class="input-group">
+        <input type="text" id="c_phn" name="c_phn" placeholder=" " required />
+        <label for="c_phn">Mobile</label>
+      </div>
+      <input type="submit" value="Register" />
+    </form>
+  </div>
+</div>
+
+<footer>
+  © 2025 ElectroZone. Customer Access Only.
+</footer>
+
+</body>
+</html>
